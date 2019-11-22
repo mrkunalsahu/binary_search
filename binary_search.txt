@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+void bin(int[],int,int);
+int main()
+{
+    int arr[]={4,6,1,9,8,10,5,7,3,2},search;
+    int size=10;
+    cout<<"ENter the element to be searched : ";
+  
+    bin(arr,size,5);
+     
+
+
+    return 0;
+
+
+}
+void bin(int arr[],int n, int search)
+{
+	cout<<"in fuc";
+int s=0,l=n-1;
+int mid=(s+l)/2;
+    while(s<l)
+    { 
+         if (search < arr[mid])
+    {
+        l=mid-1;
+    }
+     if (search > arr[mid])
+    {
+        l=mid+1;
+    }
+
+
+
+        if (arr[mid]==search)
+   {        cout<<"Element Found at location "<<mid+1;
+   return;
+
+    }
+    }
+    cout<<search<<" is not present in the array!!!";
+
+
+}
